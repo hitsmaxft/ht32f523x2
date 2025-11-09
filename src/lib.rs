@@ -2077,3 +2077,20 @@ impl Peripherals {
         }
     }
 }
+
+/// Macro to create interrupt handler functions
+///
+/// This macro allows you to create interrupt handler functions in a simpler way.
+///
+/// # Example
+///
+/// ```rust
+/// use ht32f523x2::interrupt;
+///
+/// #[interrupt]
+/// fn ADC() {
+///     // ADC interrupt handler
+/// }
+/// ```
+#[cfg(feature = "rt")]
+pub use cortex_m_rt::interrupt;
